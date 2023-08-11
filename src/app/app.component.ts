@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular_full_package';
+  title:string = 'String Interpolation';
+  num:number=0;
+  bool:boolean=true;
+  anyString:any ="Any type";
+
+  myFunction(){
+    return this.num;
+  }
+  myParams(a:number){
+    return a;
+  }
+  constructor(){
+
+  }
 }
