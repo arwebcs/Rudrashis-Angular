@@ -1,0 +1,43 @@
+<!--Event binding : (...)-->
+<!--Property binding : [...] .... Property -> HTML tags which have :style, class, id, type and so on...-->
+<!-- [()] -> Banana in the box -->
+<!-- <form>
+    <input type="text" [(ngModel)]="price" name="price"/> 
+
+    <button (click)="submit()">SAVE</button>
+    {{ tag }}
+</form> -->
+
+<input
+  type="text"
+  [(ngModel)]="pname"
+  name="pname"
+  placeholder="Product name"
+/><br />
+<input
+  type="text"
+  [(ngModel)]="price"
+  name="price"
+  placeholder="Product price"
+/>
+<button (click)="submit()">SAVE</button>
+<hr />
+<ul>
+  <li *ngFor="let product of productList">
+    {{ product.ProductName }} - {{ product.ProductPrice }}
+  </li>
+</ul>
+
+<!-- 
+  1 .Take product name and product price .
+  2. Check if product price is less than 500.
+  2.a. If it is less than 500 then calculate the discount %.
+
+
+  Ex >
+
+  Mobile : 600
+  Laptop : 480 (Discount : 4%)
+  Tab : 550 
+  
+ -->
