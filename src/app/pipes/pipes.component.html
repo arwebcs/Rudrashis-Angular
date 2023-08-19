@@ -1,0 +1,46 @@
+<h1>Default pipes / in-built pipes</h1>
+<p>
+  {{ pipeName | lowercase }}
+</p>
+<p>
+  {{ pipeName | uppercase }}
+</p>
+<p>
+  {{ dateExample | date }}
+</p>
+<p>
+  {{ jsonEx | json }}
+</p>
+<p>
+  {{ currencyEx | currency }}
+</p>
+<p>
+  {{ percentage | percent }}
+</p>
+
+<h1>Parameterised pipes</h1>
+
+<!-- <p>
+  {{ dateExample | date : "dd-MMM-yyyy" }}
+</p>
+<p>
+  {{ currencyEx | currency : "INR" }}
+</p>
+<p>
+  {{ percentage | percent : "3.1-5" }}
+</p> -->
+
+<h1>Chaining pipes</h1>
+<p>
+  {{ dateExample | date : "dd-MMM-yyyy" | uppercase }}
+</p>
+
+<h1>Own built pipes</h1>
+<p>
+  {{ pipeName | lowercase | shortText : 5 }}
+</p>
+
+<h1>Asynchronus pipes</h1>
+<p>
+  {{ status | async }}
+</p>

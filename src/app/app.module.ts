@@ -7,20 +7,23 @@ import { TopComponent } from './top/top.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
-
+import { InputComponent } from './communication/input/input.component';
+import { OutputComponent } from './communication/output/output.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { ShortTextPipe } from './pipes/short-text.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     TopComponent,
     DirectiveComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    InputComponent,
+    OutputComponent,
+    PipesComponent,
+    ShortTextPipe,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
