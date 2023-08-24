@@ -11,6 +11,7 @@ import { InputComponent } from './communication/input/input.component';
 import { OutputComponent } from './communication/output/output.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ShortTextPipe } from './pipes/short-text.pipe';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { ShortTextPipe } from './pipes/short-text.pipe';
     PipesComponent,
     ShortTextPipe,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, RouterModule],
   providers: [],
   bootstrap: [AppComponent],
 })
