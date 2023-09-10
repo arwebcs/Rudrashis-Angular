@@ -18,6 +18,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./nav-route/nav-route.module').then((m) => m.NavRouteModule),
   },
+  {
+    path: 'td-forms',
+    loadChildren: () =>
+      import('./td-forms/td-forms.module').then((m) => m.TdFormsModule),
+  },
 ];
 
 @NgModule({
