@@ -13,11 +13,19 @@ export class TdFormsComponent {
 
   nameErr: string = '';
   emailErr: string = '';
+  ageErr: string = '';
+  classErr: string = '';
+  secErr: string = '';
 
   onPopulate() {
     this.myForm?.form.patchValue({
-      nm: 'Billey',
-      em: 'abc@gmail.com',
+      nm: 'Arghya',
+      ag: 132,
+      em: 'a@gmail.com',
+      academic: {
+        class: 'IX',
+        sec: 'A',
+      },
     });
   }
   onReset() {

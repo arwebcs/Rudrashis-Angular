@@ -1,0 +1,14 @@
+<form [formGroup]="myForm">
+  Name :
+  <input type="text" formControlName="my_name" /><br />
+  Email: <input type="email" formControlName="my_email" /><br />
+  Image :
+  <input type="file" (change)="uploadFile($event)" />
+
+  <!-- H/W : Create a form group academic.. 
+
+  [formGroup]="" -->
+
+  <button (click)="onPopulate()">Fetch values</button>
+  <button (click)="save()">Save</button>
+</form>
