@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PipesComponent } from './pipes/pipes.component';
+import { LoginGuard } from './shared/guards/login.guard';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
   {
     path: 'pipes',
     component: PipesComponent,
+    canActivate: [LoginGuard],
   },
 
   {
@@ -23,8 +25,25 @@ const routes: Routes = [
     loadChildren: () =>
       import('./td-forms/td-forms.module').then((m) => m.TdFormsModule),
   },
-  { path: 'reactive-driven-forms', loadChildren: () => import('./reactive-driven-forms/reactive-driven-forms.module').then(m => m.ReactiveDrivenFormsModule) },
-  { path: 'cycles', loadChildren: () => import('./cycles/cycles.module').then(m => m.CyclesModule) },
+  {
+    path: 'reactive-driven-forms',
+    loadChildren: () =>
+      import('./reactive-driven-forms/reactive-driven-forms.module').then(
+        (m) => m.ReactiveDrivenFormsModule
+      ),
+  },
+  {
+    path: 'cycles',
+    loadChildren: () =>
+      import('./cycles/cycles.module').then((m) => m.CyclesModule),
+  },
+  {
+    path: 'simple-service',
+    loadChildren: () =>
+      import('./simple-service/simple-service.module').then(
+        (m) => m.SimpleServiceModule
+      ),
+  },
 ];
 
 @NgModule({
